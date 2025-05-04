@@ -109,21 +109,6 @@
     <!-- 引入 Supabase -->
     <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
     <script>
-        <!-- 在原有代码的 <script> 部分添加以下内容 -->
-<script>
-// 步骤1：定义敏感词列表（自行替换示例词）
-const bannedWords = ["傻逼", "操", "Bb"];
-
-// 步骤2：输入时实时过滤
-document.getElementById("letter-input").addEventListener("input", function(e) {
-  let text = e.target.value;
-  bannedWords.forEach(word => {
-    const regex = new RegExp(word, "gi");
-    text = text.replace(regex, "❤️"); // 用❤️替代敏感词
-  });
-  e.target.value = text;
-});
-</script>
         // 替换为你的 Supabase 密钥
         const SUPABASE_URL = 'https://kaotlkenxkmztbldtare.supabase.co';
         const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imthb3Rsa2VueGttenRibGR0YXJlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDYyODcwOTUsImV4cCI6MjA2MTg2MzA5NX0.Ir5DYFRR0dGQDKP2FDrD_q7dSQWwO7s-2oWPcay8ls0';
